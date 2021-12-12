@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            padding: 100px;
+        }
+
+        textarea {
+            width: 200px;
+            height: 100px;
+            border: 1px solid pink;
+            outline: none;
+            resize: none;
+        }
+
+        ul {
+            margin-top: 50px;
+        }
+
+        li {
+            list-style: none;
+            width: 300px;
+            padding: 5px;
+            background-color: rgb(238, 218, 240);
+            font-size: 12px;
+            color: black;
+            margin: 15px 0;
+        }
+
+        li a {
+            text-decoration: none;
+            float: right;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <textarea name="" id="text"></textarea>
+    <button id="btn">发布</button>
+    <ul id="ul">
+
+    </ul>
+    <script>
+        1.//获取按钮，文本域，ul
+        let btn = document.getElementById("btn");
+        let text = document.getElementById("text");
+        let ul = document.getElementById("ul");
+        2.//注册一个点击事件
+        btn.onclick = function () {
+            3.//创建一个li 并把输入到留言板的内容给li 再把li添加到ul中
+            let li = document.createElement("li");
+            4.//获取ul中所有的li
+            let children = ul.children;
+            if (text.value == "") {
+                alert("请输入留言内容哦");
+            }
+            else {
+                //把输入的留言放在li中
+                li.innerHTML = text.value + '<a href="javascript:;">删除</a>';
+                //把输入的内容放到最前面
+                ul.insertBefore(li, ul.children[0]);
+
+                let removeBtn = document.getElementsByTagName("a");
+                for (let i = 0; i < removeBtn.length; i++) {
+                    removeBtn[i].onclick = function () {
+                        ul.removeChild(this.parentNode);
+                    }
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

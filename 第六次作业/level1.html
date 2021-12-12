@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>level1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #div1 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #f5f5dc;
+
+        }
+
+        #div2 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(220, 245, 243);
+        }
+
+        #div3 {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: rgb(236, 220, 245);
+        }
+
+        div {
+            margin-top: 20px;
+            transition: all 1.2s;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        window.onload = function () {
+            let div1 = document.getElementById("div1");
+            let div2 = document.getElementById("div2");
+            let div3 = document.getElementById("div3");
+
+            setTimeout(function () {
+                div1.style.transform = "translateX(500px)";
+                setTimeout(function () {
+                    div2.style.transform = "translateX(500px)";
+                    setTimeout(function () {
+                        div3.style.transform = "translateX(500px)";
+
+                    }, 500)
+                }, 500)
+            }, 500)
+        }
+
+    </script>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+</body>
+
+</html>

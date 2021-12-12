@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="word">
+
+    </div>
+
+    <script>
+        let word = document.getElementById("word")
+        let i = 0
+        str = '元丰六年十月十二日夜，解衣欲睡，月色入户，欣然起行。念无与为乐者，遂至承天寺寻张怀民。怀民亦未寝，相与步于中庭。庭下如积水空明，水中藻、荇交横，盖竹柏影也。何夜无月？何处无竹柏？但少闲人如吾两人者耳。'
+
+        function type() {
+
+            if (i <= str.length) {
+                word.innerHTML = str.slice(0, i++)
+
+                setTimeout(type, 200)
+            }
+
+        }
+
+        type();
+
+
+    </script>
+</body>
+
+</html>
