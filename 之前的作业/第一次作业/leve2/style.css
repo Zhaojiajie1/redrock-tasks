@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    width: 320px;
+    height: 430px;
+    border: 2px solid red;
+    margin: 100px auto;
+}
+
+.header{
+    margin: 8px 20px;
+    width: 280px;
+    height: 16.8px;
+    color: rgb(117,117,117);
+    font-size: 13px;
+    font-weight: bold;
+
+}
+.header a{
+    text-decoration: none;
+    color: rgb(117,117,117);
+}
+.header1{
+    float: left;
+    display: inline-block;
+}
+.header2{
+    float: right;
+    display: inline-block;
+}
+
+.shoujihao{
+    margin: 8px 20px;
+    width: 278px;
+    height: 35px;
+}
+.shoujihao input{
+    float: left;
+    width: 275px;
+    height: 33px;
+    color: rgb(132,123,126);
+}
+
+.password{
+    margin: 20px 20px;
+    width: 278px;
+    height: 35px;
+    border:1px solid rgb(132,123,126);
+}
+.password img{
+    width: 15px;
+    height: 15px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+.password input{
+    width: 240px;
+    height: 32px;
+    color: rgb(132,123,126);
+    float: right;
+    border: 0;
+}
+
+.forget{
+    margin: 8px 20px;
+    width: 280px;
+    height: 16.8px;
+    font-size: 10px;
+    font-weight: bold;
+}
+.forget a{
+    float:right;
+    color:rgb(254,161,47) ;
+    text-decoration: none;
+}
+
+.login{
+    margin: 8px 20px;
+    width: 280px;
+    height: 40px;
+    background-color: rgb(255,195,0);
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+
+}
+.login a{
+    text-decoration: none;
+    color: black;
+}
+
+.ps{
+    margin: 8px 20px;
+    width: 280px;
+    height: 16.8px;
+    font-size: 13px;
+    font-weight: bold;
+}
+.ps p{
+    float: left;
+}
+
+.ps1{
+    color: rgb(117,117,117);
+}
+
+.ps a{
+    color:rgb(254,161,47) ;
+    text-decoration: none;
+}
+
+.footer{
+    font-size: 13px;
+    margin: 20px 20px;
+   
+}
+.footer p{
+    display: inline;
+    color: rgb(117,117,117)
+}
+.footer a{
+    color:rgb(254,161,47) ;
+    text-decoration: none;
+}
+
+.hezuo{
+   
+    margin: 20px 50px;
+    font-size: 14px;
+    text-align: center;
+}
+.heuzuo p{
+    float: left;
+
+}
+.hezuo1{
+    color: black;
+    width: 80px;
+    height: 0.5px;
+    position: relative;
+    right: 38px;
+    top: 9px;
+    background-color: rgb(117,117,117);
+}
+.hezuo2{
+    color: black;
+    width: 78px;
+    height: 0.5px;
+    position: relative;
+    left: 180px;
+    bottom: 9px;
+    background-color: rgb(117,117,117);
+    
+}
+
+.other{
+    width: 280px;
+    text-align: center;
+}
+
+.other img{
+    width: 18px;
+    height: 18px;
+}

@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Async ball</title>
+  <style>
+    .ball1 {
+      width: 50px;
+      height: 50px;
+      background-color: aqua;
+      border-radius: 50%;
+      transform: translateX(0);
+    }
+
+    .ball2 {
+      width: 50px;
+      height: 50px;
+      background-color: darkorange;
+      border-radius: 50%;
+      transform: translateX(0);
+    }
+
+    .ball3 {
+      width: 50px;
+      height: 50px;
+      background-color: slategrey;
+      border-radius: 50%;
+      transform: translateX(0);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="ball ball1" style="margin-left: 0;"></div>
+  <div class="ball ball2" style="margin-left: 0;"></div>
+  <div class="ball ball3" style="margin-left: 0;"></div>
+  <script>
+    const ball1 = document.querySelector('.ball1')
+    const ball2 = document.querySelector('.ball2')
+    const ball3 = document.querySelector('.ball3')
+
+
+    // // callback 用法的 demo
+    // function move(ball, target, cb) {
+    //   setTimeout(function(){
+    //     var  marginLeft=parseInt(ball.style.marginLeft,10);
+    //     if(marginLeft ===target){
+    //       cb && cb()
+    //     }else{
+    //       if(marginLeft<target){
+    //         marginLeft ++;
+    //       }else{
+    //         marginLeft --;
+    //       }
+    //       ball.style.marginLeft=marginLeft+'px';
+    //       move(ball, target, cb)
+    //     }
+    //   },10)
+    // }
+    // move(ball1,150,function(){
+    //   move(ball2,150,function(){
+    //     move(ball3,150,function(){
+
+    //     })
+    //   })
+    // })
+
+    //     // Promise 用法的 demo
+    /*     var Promise = window.Promise;
+        function move(ball, target) {
+          // TODO
+          return new Promise(function (resolve, reject) {
+            function _animate() {
+              setTimeout(function () {
+                var marginLeft = parseInt(ball.style.marginLeft, 10)
+                if (marginLeft === target) {
+                  resolve(ball, target)
+                } else {
+                  if (marginLeft < target) {
+                    marginLeft++;
+                  } else {
+                    marginLeft--;
+                  }
+                  ball.style.marginLeft = marginLeft + 'px'
+                  _animate();
+                }
+              }, 10)
+            }
+            _animate();
+          });
+        }
+        move(ball1, 150)
+          .then(function () {
+            return move(ball2, 150)
+          })
+          .then(function () {
+            return move(ball3, 150)
+          }) */
+
+
+
+    //async/await 用法的 demo
+    function go(ball, target) {
+      // TODO
+      return new Promise(function (resolve, reject) {
+        function _animate() {
+          setTimeout(function () {
+            var marginLeft = parseInt(ball.style.marginLeft, 10)
+            if (marginLeft === target) {
+              resolve(ball, target)
+              console.log("111")
+            } else {
+              if (marginLeft < target) {
+                marginLeft++;
+              } else {
+                marginLeft--;
+              }
+              ball.style.marginLeft = marginLeft + 'px'
+              _animate();
+            }
+          }, 10)
+        }
+        _animate();
+      });
+    }
+    async function m() {
+      await go(ball1, 150);
+      await go(ball2, 150);
+      await go(ball3, 150);
+    }
+    m();
+    function Person() { }
+    var person1 = new Person()
+    var person2 = new Person()
+    console.log(person1.prototype);
+  </script>
+</body>
+
+</html>

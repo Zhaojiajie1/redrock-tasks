@@ -1,0 +1,98 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.box{
+    
+}
+.header{
+   position: absolute;
+   top: 0;
+   left: 1200px;
+}
+.header a{
+    font-size: 12px;
+    color: black;
+}
+.jiacu{
+    font-weight: 700px;
+}
+.beijing a{
+    display: inline-block;
+    background-color: rgb(51,133,255);
+    color: white;
+}
+.logo{
+    margin:25px auto;
+
+}
+.logo img{
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    height: 180px;
+}
+
+.search{
+    width: 731px;
+    height: 40px;
+    border:1px solid  rgb(155,155,155);
+    position: absolute;
+    margin: 0 400px;
+   
+}
+.search input{
+    float: left;
+    width: 615px;
+    height: 37px;
+    
+}
+.search button{
+    float: left;
+    width: 112px;
+    height: 41px;
+   
+
+}
+
+.QR{
+    margin-top: 200px;
+}
+.QR img{
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 100px;
+}
+
+.reminder{
+    width: 200px;
+    margin: 0 auto;
+}
+
+.reminder1{
+    text-align: center;
+}
+.reminder2 {
+    margin: 10px auto;
+    color: rgb(173,164,159);
+    text-align: center;
+}
+
+.ps{
+    width: 400px;
+    
+    margin: 0 640px;
+}
+.ps a{
+    color: rgb(173,164,159);
+    font-size: 12px;
+}
+
+.footer{
+    width:1500px;
+    color:rgb(173,164,159) ;
+    font-size: 12px;
+    margin-top: 30px;
+    text-align: center;
+}

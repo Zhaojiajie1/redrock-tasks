@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex</title>
+    <style>
+        .box {
+            display: flex;
+
+            background-color: pink;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+        }
+
+        .box div {
+            width: 150px;
+
+            padding: 20px;
+        }
+
+        .box :nth-child(1) {
+            height: 120px;
+            border: 1px solid white;
+        }
+
+        .box :nth-child(2) {
+            height: 100px;
+            border: 1px solid white;
+        }
+
+        .box :nth-child(3) {
+            height: 40px;
+            border: 1px solid white;
+        }
+
+        .box :nth-child(4) {
+            height: 200px;
+            border: 1px solid purple;
+
+        }
+    </style>
+</head>
+
+<body class="box">
+
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    </div>
+</body>
+
+</html>

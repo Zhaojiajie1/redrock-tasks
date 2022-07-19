@@ -9,9 +9,13 @@
 </head>
 
 <body>
+    <input id="ipt">
+    <button id="btn">点击我</button>
+    <div id="text"></div>
     <script>
-        //function fetch(input: RequestInfo, init?: RequestInit): Promise<Response>
-        const xhr = new XMLHttpRequest();
+        const btn = document.getElementById("btn");
+        const text = document.getElementById("text");
+        const ipt = document.getElementById("ipt");
 
         fetch("https://anonym.ink:8000/homework/fufubot_test/", {
             method: "POST",

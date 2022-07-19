@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let historyObj = window.history;
+
+        (function (historyObj) {
+            window.onPushState = function () {
+                console.log("pushState")
+            }
+            const pushStateListener = historyObj.pushState;
+            historyObj.pushState = function (state, title, url) {
+                pushStateListener.apply(historyObj, arguments);
+                if (typeof onPushState === "function") {
+                    window.onPushState()
+                }
+            }
+        }(historyObj))
+
+
+        setTimeout(() => {
+            historyObj.pushState({ page: 1 }, null, '/page1')
+        }, 1000)
+    </script>
+</body>
+
+</html>
