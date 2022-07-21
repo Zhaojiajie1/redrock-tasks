@@ -18,6 +18,7 @@
             }
             const pushStateListener = historyObj.pushState;
             historyObj.pushState = function (state, title, url) {
+                console.log(pushStateListener)
                 pushStateListener.apply(historyObj, arguments);
                 if (typeof onPushState === "function") {
                     window.onPushState()
